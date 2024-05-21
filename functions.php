@@ -149,6 +149,16 @@ function fwd37_school_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'fwd37_school_theme_scripts' );
 
+// Setup Animate on Scroll so each blog post animates into the viewport when scrolling
+function fwd37_school_theme_enqueue_aos() {
+    if ( is_singular( 'post' ) || is_home() ) {
+        wp_enqueue_style( 'aos-css', get_template_directory_uri() . '/node_modules/aos/dist/aos.css', array(), '3.0.0' );
+        wp_enqueue_script( 'aos-js', get_template_directory_uri() . '/node_modules/aos/dist/aos.js', array(), '3.0.0', true );
+        wp_add_inline_script( 'aos-js', 'AOS.init();' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'fwd37_school_theme_enqueue_aos' );
+
 /**
  * Implement the Custom Header feature.
  */
