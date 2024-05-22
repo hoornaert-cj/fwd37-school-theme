@@ -89,4 +89,15 @@ function fwd_register_custom_taxonomies() {
     }
 }
 add_action( 'init', 'fwd_register_custom_taxonomies' );
-?>
+
+
+function fwd_change_staff_title_placeholder( $title ) {
+    $screen = get_current_screen();
+
+    if ( 'fwd-staff' == $screen->post_type ) {
+        $title = 'Add staff name';
+    }
+
+    return $title;
+}
+add_filter( 'enter_title_here', 'fwd_change_staff_title_placeholder' );
