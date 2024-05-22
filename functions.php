@@ -82,6 +82,15 @@ function fwd37_school_theme_setup() {
 		)
 	);
 
+	/**
+	 * Add support for Block Editor features.
+	 *
+	 * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/
+	 */
+	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'responsive-embeds' );
+	add_theme_support( 'align-wide' );
+
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
