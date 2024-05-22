@@ -76,16 +76,16 @@ function fwd_register_custom_taxonomies() {
         'show_in_rest'                     => true,
         'show_admin_column'       => true,
         'query_var'                           => true,
-        'rewrite'           => array( 'slug' => 'staff-category' ),
+        'rewrite'           => array( 'slug' => 'fwd-staff-category' ),
     );
 
-    register_taxonomy( 'staff-category', array( 'fwd-staff' ), $args );
+    register_taxonomy( 'fwd- staff-category', array( 'fwd-staff' ), $args );
 
-    if ( ! term_exists( 'Faculty', 'staff-category' ) ) {
-        wp_insert_term( 'Faculty', 'staff-category' );
+    if ( ! term_exists( 'Faculty', 'fwd_staff-category' ) ) {
+        wp_insert_term( 'Faculty', 'fwd_staff-category' );
     }
-    if ( ! term_exists( 'Administrative', 'staff-category' ) ) {
-        wp_insert_term( 'Administrative', 'staff-category' );
+    if ( ! term_exists( 'Administrative', 'fwd_staff-category' ) ) {
+        wp_insert_term( 'Administrative', 'fwd_staff-category' );
     }
 }
 add_action( 'init', 'fwd_register_custom_taxonomies' );
