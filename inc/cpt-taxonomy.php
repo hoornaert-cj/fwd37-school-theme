@@ -54,42 +54,41 @@ add_action( 'init', 'fwd_register_custom_post_types' );
 function fwd_register_custom_taxonomies() {
     $labels = array(
         'name'                          => _x( 'Staff Categories', 'taxonomy general name' ),
-        'singular_name'         => _x( 'Staff Category', 'taxonomy singular name' ),
-        'search_items'          => __( 'Search Staff Categories' ),
-        'all_items'                  => __( 'All Staff Categories' ),
-        'parent_item'            => __( 'Parent Staff Category' ),
-        'parent_item_colon' => __( 'Parent Staff Category:' ),
-        'edit_item'                 => __( 'Edit Staff Category' ),
-        'view_item'                => __( 'View Staff Category' ),
-        'update_item'           => __( 'Update Staff Category' ),
-        'add_new_item'        => __( 'Add New Staff Category' ),
-        'new_item_name'     => __( 'New Staff Category Name' ),
-        'menu_name'            => __( 'Staff Categories' ),
+        'singular_name'                 => _x( 'Staff Category', 'taxonomy singular name' ),
+        'search_items'                  => __( 'Search Staff Categories' ),
+        'all_items'                     => __( 'All Staff Categories' ),
+        'parent_item'                   => __( 'Parent Staff Category' ),
+        'parent_item_colon'             => __( 'Parent Staff Category:' ),
+        'edit_item'                     => __( 'Edit Staff Category' ),
+        'view_item'                     => __( 'View Staff Category' ),
+        'update_item'                   => __( 'Update Staff Category' ),
+        'add_new_item'                  => __( 'Add New Staff Category' ),
+        'new_item_name'                 => __( 'New Staff Category Name' ),
+        'menu_name'                     => __( 'Staff Categories' ),
     );
 
     $args = array(
-        'hierarchical'                      => true,
-        'labels'                                 => $labels,
-        'show_ui'                             => true,
-        'show_in_menu'                 => true,
-        'show_in_nav_menus'        => true,
-        'show_in_rest'                     => true,
-        'show_admin_column'       => true,
-        'query_var'                           => true,
-        'rewrite'           => array( 'slug' => 'fwd-staff-category' ),
+        'hierarchical'                  => true,
+        'labels'                        => $labels,
+        'show_ui'                       => true,
+        'show_in_menu'                  => true,
+        'show_in_nav_menus'             => true,
+        'show_in_rest'                  => true,
+        'show_admin_column'             => true,
+        'query_var'                     => true,
+        'rewrite'                       => array( 'slug' => 'fwd-staff-category' ),
     );
 
-    register_taxonomy( 'fwd- staff-category', array( 'fwd-staff' ), $args );
+    register_taxonomy( 'fwd-staff-category', array( 'fwd-staff' ), $args );
 
-    if ( ! term_exists( 'Faculty', 'fwd_staff-category' ) ) {
-        wp_insert_term( 'Faculty', 'fwd_staff-category' );
+    if ( ! term_exists( 'Faculty', 'fwd-staff-category' ) ) {
+        wp_insert_term( 'Faculty', 'fwd-staff-category' );
     }
-    if ( ! term_exists( 'Administrative', 'fwd_staff-category' ) ) {
-        wp_insert_term( 'Administrative', 'fwd_staff-category' );
+    if ( ! term_exists( 'Administrative', 'fwd-staff-category' ) ) {
+        wp_insert_term( 'Administrative', 'fwd-staff-category' );
     }
 }
 add_action( 'init', 'fwd_register_custom_taxonomies' );
-
 
 function fwd_change_staff_title_placeholder( $title ) {
     $screen = get_current_screen();
@@ -101,3 +100,5 @@ function fwd_change_staff_title_placeholder( $title ) {
     return $title;
 }
 add_filter( 'enter_title_here', 'fwd_change_staff_title_placeholder' );
+
+?>
