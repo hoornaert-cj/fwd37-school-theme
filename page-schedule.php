@@ -30,7 +30,7 @@ get_header(); ?>
                     <tbody>
                         <?php foreach ($schedule_items as $item): ?>
                             <tr>
-                                <td><?php echo $item['date']; ?></td>
+								<td><?php echo date('F j, Y', strtotime($item['date'])); ?></td>
                                 <td><?php echo $item['course']; ?></td>
                                 <td><?php echo $item['instructor']; ?></td>
                             </tr>
