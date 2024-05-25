@@ -94,8 +94,8 @@ function fwd_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-admin-users',
-        'supports'           => array( 'title', 'editor' ),
-        'template'           => array( array( 'core/paragraph', array( 'placeholder' => 'Describe the sudent...' )  ), array( 'core/button' ) ),
+        'supports'           => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'template'           => array(array('core/paragraph', array('placeholder' => 'Describe the student...')), array('core/button')),
         'template_lock'      => 'all',
     );
 
