@@ -104,6 +104,7 @@ function fwd_register_custom_post_types() {
 add_action( 'init', 'fwd_register_custom_post_types' );
 
 function fwd_register_custom_taxonomies() {
+    //Staff Category
     $labels = array(
         'name'                          => _x( 'Staff Categories', 'taxonomy general name' ),
         'singular_name'                 => _x( 'Staff Category', 'taxonomy singular name' ),
@@ -138,6 +139,43 @@ function fwd_register_custom_taxonomies() {
     }
     if ( ! term_exists( 'Administrative', 'fwd-staff-category' ) ) {
         wp_insert_term( 'Administrative', 'fwd-staff-category' );
+    }
+
+    //Student Category
+    $labels = array(
+        'name'                          => _x( 'Student Categories', 'taxonomy general name' ),
+        'singular_name'                 => _x( 'Student Category', 'taxonomy singular name' ),
+        'search_items'                  => __( 'Search Student Categories' ),
+        'all_items'                     => __( 'All Student Categories' ),
+        'parent_item'                   => __( 'Parent Student Category' ),
+        'parent_item_colon'             => __( 'Parent Student Category:' ),
+        'edit_item'                     => __( 'Edit Student Category' ),
+        'view_item'                     => __( 'View Student Category' ),
+        'update_item'                   => __( 'Update Student Category' ),
+        'add_new_item'                  => __( 'Add New Student Category' ),
+        'new_item_name'                 => __( 'New Student Category Name' ),
+        'menu_name'                     => __( 'Student Categories' ),
+    );
+
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_in_menu'      => true,
+        'show_in_nav_menu'  => true,
+        'show_in_rest'      => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'student-categories' ),
+    );
+
+    register_taxonomy( 'fwd-student-category', array( 'fwd-student' ), $args );
+
+    if ( ! term_exists( 'Designer', 'fwd-student-category' ) ) {
+        wp_insert_term( 'Designer', 'fwd-student-category' );
+    }
+    if ( ! term_exists( 'Developer', 'fwd-student-category' ) ) {
+        wp_insert_term( 'Developer', 'fwd-student-category' );
     }
 }
 add_action( 'init', 'fwd_register_custom_taxonomies' );
