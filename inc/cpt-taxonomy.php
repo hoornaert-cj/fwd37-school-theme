@@ -141,7 +141,6 @@ function fwd_register_custom_taxonomies() {
         wp_insert_term( 'Administrative', 'fwd-staff-category' );
     }
 
-    //Student Category
     $labels = array(
         'name'                          => _x( 'Student Categories', 'taxonomy general name' ),
         'singular_name'                 => _x( 'Student Category', 'taxonomy singular name' ),
@@ -171,6 +170,7 @@ function fwd_register_custom_taxonomies() {
 
     register_taxonomy( 'fwd-student-category', array( 'fwd-student' ), $args );
 
+    // Check if terms exist and insert if they do not
     if ( ! term_exists( 'Designer', 'fwd-student-category' ) ) {
         wp_insert_term( 'Designer', 'fwd-student-category' );
     }
