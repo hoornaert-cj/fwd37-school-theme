@@ -46,10 +46,15 @@ function fwd37_school_theme_setup() {
      */
     add_theme_support( 'post-thumbnails' );
 
-      /*
+    /*
      * Add new image size at 200x300px
      */
     add_image_size( '200x300', 200, 300, true );
+
+    /*
+     * Add support for custom logo
+     */
+    add_theme_support( 'custom-logo' );
 
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus(
