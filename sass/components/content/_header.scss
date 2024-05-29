@@ -1,9 +1,10 @@
+@import 'sass\abstracts\variables\_colors.scss';
+
+
 .site-header {
     background-color: $color__background-body; // Use the body background color
     padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox(row, space-between, center);
 
     .site-branding {
         margin-right: auto; // Pushes the site title to the left
