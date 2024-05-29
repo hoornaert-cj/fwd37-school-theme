@@ -1,0 +1,49 @@
+.site-header {
+    background-color: $color__background-body; // Use the body background color
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .site-branding {
+        margin-right: auto; // Pushes the site title to the left
+    }
+
+    .main-navigation {
+        display: flex;
+        align-items: center;
+
+        .menu-toggle {
+            display: none; // Hide hamburger menu by default
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+
+            li {
+                margin-left: 1rem;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                a {
+                    color: $color__text-main; // Use the main text color
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    // Media query for screens smaller than 50em
+    @media screen and (max-width: 50em) {
+        .main-navigation .menu {
+            display: none; // Hide primary menu items
+        }
+
+        .main-navigation .menu-toggle {
+            display: block; // Show hamburger menu
+        }
+    }
+}
