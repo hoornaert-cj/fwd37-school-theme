@@ -20,6 +20,16 @@
 				?>
 			</a>
 			<span class="sep"> | </span>
+			<nav id="footer-navigation" class="footer-navigation">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'footer',
+					'menu_id'        => 'footer-menu',
+				)
+			);
+			?>
+			</nav>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'fwd37-school-theme' ), 'fwd37-school-theme', '<a href="https://chrishoornaert.com/school-demo/">Jacob Harris/Chris Hoornaert</a>' );
