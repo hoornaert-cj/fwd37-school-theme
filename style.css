@@ -897,7 +897,18 @@ textarea {
 	color: #fff;
 }
 .site-header .site-branding {
-	padding: 2rem;
+	padding: 2.5rem 1rem 2.25rem 1rem;
+}
+.site-header .site-branding a {
+	display: inline-block;
+}
+.site-header .site-branding img {
+	max-width: 100%;
+	height: 1.5rem;
+}
+.site-header .site-branding .site-title,
+.site-header .site-branding .site-description {
+	margin: 0;
 }
 @media screen and (min-width: 50em) {
 	.site-header .site-branding {

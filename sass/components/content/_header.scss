@@ -8,7 +8,21 @@
     }
 
     .site-branding {
-      padding: 2rem;
+        padding: 2.5rem 1rem 2.25rem 1rem;
+
+      a {
+        display: inline-block;
+      }
+
+      img {
+        max-width: 100%;  // Ensure the SVG scales properly
+        height: 1.5rem;     // Maintain aspect ratio
+      }
+
+      .site-title,
+      .site-description {
+        margin: 0;
+      }
 
       @media screen and (min-width: 50em) {
         text-align: center;

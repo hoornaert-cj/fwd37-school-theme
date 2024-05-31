@@ -185,10 +185,11 @@ function fwd37_school_theme_enqueue_aos() {
 }
 add_action( 'wp_enqueue_scripts', 'fwd37_school_theme_enqueue_aos' );
 
-function your_theme_enqueue_styles() {
-    wp_enqueue_style('main-styles', get_template_directory_uri() . '/assets/css/main.css');
+function fwd37_school_theme_enqueue_styles() {
+    wp_enqueue_style( 'fwd37-school-theme-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 }
-add_action('wp_enqueue_scripts', 'your_theme_enqueue_styles');
+
+add_action( 'wp_enqueue_scripts', 'fwd37_school_theme_enqueue_styles' );
 
 /**
  * Implement the Custom Header feature.
@@ -219,4 +220,13 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
     require get_template_directory() . '/inc/jetpack.php';
 }
+
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
 ?>
+
+
