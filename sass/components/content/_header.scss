@@ -1,100 +1,56 @@
 .site-header {
-    background-color: $color__background-hr;
-    color: $color__text-hr;
-    width: 100%;
+  background-color: $color__background-hr;
+  color: $color__text-hr;
+  width: 100%;
 
-    .header-container {
-        display: grid;
-        grid-template-columns: auto 1fr; /* Logo on the left, navigation on the right */
-        align-items: center; /* Align items vertically */
+  .header-container {
+    display: flex;
+    align-items: center; // Align items vertically
+    justify-content: space-between; // Space between branding and menu
+  }
+
+  a {
+    color: $color__text-hr;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color__link-hover;
+      color: $color__background-ins;
     }
+  }
+
+  li {
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  .site-branding {
+    padding: 2.5rem 1rem 2.25rem 1rem;
 
     a {
-      color: $color__text-hr;
-      text-decoration: none;
-
-      &:hover {
-        background-color: $color__link-hover;
-        color: $color__background-ins
-      }
+      display: inline-block;
     }
 
-    li {
-      text-transform: uppercase;
-      font-weight: 900;
+    img {
+      max-width: 100%;
+      height: 1.5rem;
     }
 
-    .site-branding {
-      padding: 2.5rem 1rem 2.25rem 1rem;
-      max-width: 50%;
-
-      a {
-        display: inline-block;
-      }
-
-      img {
-        max-width: 100%;
-        height: 1.5rem;
-      }
-
-      .site-title,
-      .site-description {.site-header {
-        grid-area: header;
-        background-color: #111;
-        color: #fff;
-
-        a {
-          color: #fff;
-        }
-
-        .site-branding {
-          padding: 1rem;
-
-          @media screen and (min-width: 50em) {
-            text-align: center;
-            grid-column: 2/3;
-            text-align: left;
-          }
-        }
-
-        .site-title {
-          font-size: 1.875rem;
-          margin: 0;
-        }
-
-        .site-description {
-          margin: 0;
-        }
-
-        @media screen and (min-width: 50em) {
-          display: grid;
-          grid-template-columns: 1fr minmax(auto, 25rem) minmax(auto, 37.5rem) 1fr;
-          justify-content: center;
-        }
-      }
-
-        margin: 0;
-      }
-
-      @media screen and (min-width: 50em) {
-        text-align: center;
-        grid-column: 2/3;
-        text-align: left;
-      }
-    }
-
-    .site-title {
-      font-size: 1.875rem;
-      margin: 0;
-    }
-
+    .site-title,
     .site-description {
       margin: 0;
     }
+  }
 
-    @media screen and (min-width: 50em) {
-      display: grid;
-      grid-template-columns: 1fr minmax(auto, 25rem) minmax(auto, 37.5rem) 1fr;
-      justify-content: center;
+  @media screen and (min-width: 50em) {
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; // Ensure branding and menu are on the same line
+    }
+
+    .site-branding {
+      max-width: 50%;
     }
   }
+}
