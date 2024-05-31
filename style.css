@@ -624,39 +624,30 @@ textarea {
 	display: block;
 }
 .main-navigation ul {
-	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	/* Display sub-menu ul elements */
 }
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
+	display: none;
 	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-.main-navigation ul ul ul {
-	left: -999em;
 	top: 0;
+	left: 100%; /* Position the sub-menu to the right of the parent */
+	z-index: 999; /* Ensure the sub-menu appears above other content */
 }
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
 	display: block;
-	left: auto;
 }
-.main-navigation ul ul a {
-	width: 200px;
-}
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-.main-navigation li {
+.main-navigation ul li {
 	position: relative;
 	padding: 1rem;
 }
-.main-navigation a {
+.main-navigation ul li:hover > a, .main-navigation ul li.focus > a {
+	/* Add any specific styles for hover or focus states */
+}
+.main-navigation ul a {
 	display: block;
 	text-decoration: none;
 }

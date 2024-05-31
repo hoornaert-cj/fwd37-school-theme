@@ -1,69 +1,49 @@
-// _navigation.scss
-
 .main-navigation {
-  display: block;
-//   width: 100%;
+	display: block;
 
-  ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
+	ul {
+	  list-style: none;
+	  margin: 0;
+	  padding-left: 0;
 
-    ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 100%;
-      left: -999em;
-      z-index: 99999;
+	  /* Display sub-menu ul elements */
+	  ul {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 100%; /* Position the sub-menu to the right of the parent */
+		z-index: 999; /* Ensure the sub-menu appears above other content */
 
-      ul {
-        left: -999em;
-        top: 0;
-      }
+		li:hover > ul,
+		li.focus > ul {
+		  display: block;
+		}
+	  }
 
-      li {
-        &:hover > ul,
-        &.focus > ul {
-          display: block;
-          left: auto;
-        }
-      }
+	  li {
+		position: relative;
+		padding: 1rem;
 
-      a {
-        width: 200px;
-      }
-    }
+		&:hover > a,
+		&.focus > a {
+		  /* Add any specific styles for hover or focus states */
+		}
+	  }
 
-    li:hover > ul,
-    li.focus > ul {
-      left: auto;
-    }
+	  a {
+		display: block;
+		text-decoration: none;
+	  }
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	  // Add any specific styles for current states
+	}
   }
 
-  li {
-    position: relative;
-	padding: 1rem;
-
-    &:hover > a,
-    &.focus > a {
-      // Add any specific styles for hover or focus states
-    }
-  }
-
-  a {
-    display: block;
-    text-decoration: none;
-  }
-
-  .current_page_item > a,
-  .current-menu-item > a,
-  .current_page_ancestor > a,
-  .current-menu-ancestor > a {
-    // Add any specific styles for current states
-  }
-}
 
 /* Small menu */
 .menu-toggle,
