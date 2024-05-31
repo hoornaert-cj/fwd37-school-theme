@@ -1,14 +1,21 @@
 .site-header {
-    grid-area: header;
     background-color: $color__background-hr;
     color: $color__text-hr;
+    width: 100%;
+
+    .header-container {
+        display: grid;
+        grid-template-columns: auto 1fr; /* Logo on the left, navigation on the right */
+        align-items: center; /* Align items vertically */
+    }
 
     a {
       color: $color__text-hr;
       text-decoration: none;
 
       &:hover {
-        background-color: gray;
+        background-color: $color__link-hover;
+        color: $color__background-ins
       }
     }
 
@@ -19,6 +26,7 @@
 
     .site-branding {
       padding: 2.5rem 1rem 2.25rem 1rem;
+      max-width: 50%;
 
       a {
         display: inline-block;
