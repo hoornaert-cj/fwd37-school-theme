@@ -185,6 +185,11 @@ function fwd37_school_theme_enqueue_aos() {
 }
 add_action( 'wp_enqueue_scripts', 'fwd37_school_theme_enqueue_aos' );
 
+function your_theme_enqueue_styles() {
+    wp_enqueue_style('main-styles', get_template_directory_uri() . '/assets/css/main.css');
+}
+add_action('wp_enqueue_scripts', 'your_theme_enqueue_styles');
+
 /**
  * Implement the Custom Header feature.
  */
