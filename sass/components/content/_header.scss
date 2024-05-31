@@ -1,22 +1,32 @@
 .site-header {
     grid-area: header;
-    background-color: #111;
-    color: #fff;
+    background-color: $color__background-hr;
+    color: $color__text-hr;
 
     a {
-      color: #fff;
+      color: $color__text-hr;
+      text-decoration: none;
+
+      &:hover {
+        background-color: gray;
+      }
+    }
+
+    li {
+      text-transform: uppercase;
+      font-weight: 900;
     }
 
     .site-branding {
-        padding: 2.5rem 1rem 2.25rem 1rem;
+      padding: 2.5rem 1rem 2.25rem 1rem;
 
       a {
         display: inline-block;
       }
 
       img {
-        max-width: 100%;  // Ensure the SVG scales properly
-        height: 1.5rem;     // Maintain aspect ratio
+        max-width: 100%;
+        height: 1.5rem;
       }
 
       .site-title,

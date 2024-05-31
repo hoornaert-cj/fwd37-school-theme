@@ -664,8 +664,7 @@ textarea {
 	position: relative;
 }
 .main-navigation li.current-menu-item > a, .main-navigation li.current_page_item > a, .main-navigation li:hover > a, .main-navigation li.focus > a {
-	text-decoration: underline;
-	text-decoration-color: #fff200;
+	text-decoration: none;
 }
 .main-navigation li.current-menu-item svg path, .main-navigation li.current_page_item svg path, .main-navigation li:hover > a svg path, .main-navigation li.focus > a svg path {
 	fill: #fff200;
@@ -890,11 +889,19 @@ textarea {
 
 .site-header {
 	grid-area: header;
-	background-color: #111;
+	background-color: #000;
 	color: #fff;
 }
 .site-header a {
 	color: #fff;
+	text-decoration: none;
+}
+.site-header a:hover {
+	background-color: gray;
+}
+.site-header li {
+	text-transform: uppercase;
+	font-weight: 900;
 }
 .site-header .site-branding {
 	padding: 2.5rem 1rem 2.25rem 1rem;

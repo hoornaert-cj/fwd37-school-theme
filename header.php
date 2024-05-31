@@ -50,7 +50,7 @@
 			$fwd37_school_theme_description = get_bloginfo( 'description', 'display' );
 			if ( $fwd37_school_theme_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $fwd37_school_theme_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<p class="site-description"><?php echo $fwd37_school_theme_description; ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
