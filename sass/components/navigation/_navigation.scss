@@ -1,17 +1,14 @@
+// _navigation.scss
+
 .main-navigation {
 	display: block;
 	width: 100%;
-	position: absolute;
-	top: 6.5rem;
-	right: 0;
-	z-index: 1000;
 
 	ul {
 	  display: none;
 	  list-style: none;
 	  margin: 0;
 	  padding-left: 0;
-	  background-color: #111;
 
 	  ul {
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -20,20 +17,22 @@
 		top: 100%;
 		left: -999em;
 		z-index: 99999;
-		background-color: #111;
-		flex-direction: column;
 
-		a {
+		ul {
 		  left: -999em;
 		  top: 0;
-		  width: 200px;
-		  text-align: left;
 		}
 
-		li:hover > ul,
-		li.focus > ul {
-		  left: 100%;
-		  top: 0;
+		li {
+		  &:hover > ul,
+		  &.focus > ul {
+			display: block;
+			left: auto;
+		  }
+		}
+
+		a {
+		  width: 200px;
 		}
 	  }
 
@@ -46,90 +45,54 @@
 	li {
 	  position: relative;
 
-	  &.current-menu-item > a,
-	  &.current_page_item > a,
 	  &:hover > a,
 	  &.focus > a {
-		text-decoration: none;
-	  }
-
-	  &.current-menu-item svg path,
-	  &.current_page_item svg path,
-	  &:hover > a svg path,
-	  &.focus > a svg path {
-		fill: $color__link-hover;
+		// Add any specific styles for hover or focus states
 	  }
 	}
 
 	a {
 	  display: block;
-	  padding: 0.75rem 1.25rem;
-	  text-align: center;
+	  text-decoration: none;
 	}
 
-	&.toggled ul {
-	  display: block;
-	}
-
-	@media screen and (min-width: 50em) {
-	  width: auto;
-	  position: relative;
-	  top: 0;
-	  align-self: center;
-	  margin-left: auto;
-
-	  ul,
-	  &.toggled ul {
-		display: flex;
-		justify-content: center;
-	  }
-
-	  ul ul {
-		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-		float: left;
-		position: absolute;
-		top: 100%;
-		left: -999em;
-		z-index: 99999;
-		background-color: #111;
-		flex-direction: column;
-
-		a {
-		  left: -999em;
-		  top: 0;
-		  width: 200px;
-		  text-align: left;
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-		  left: 100%;
-		  top: 0;
-		}
-	  }
-
-	  ul li:hover > ul,
-	  ul li.focus > ul {
-		left: auto;
-	  }
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	  // Add any specific styles for current states
 	}
   }
 
-  .menu-toggle {
-	position: absolute;
-	top: -5rem;
-	right: 0.5rem;
-	z-index: 1100;
+  /* Small menu */
+  .menu-toggle,
+  .main-navigation.toggled ul {
 	display: block;
-	width: 3.75rem;
-	padding: 1rem;
-	margin: 0;
-	border: none;
-	background: transparent;
-	color: #fff;
+  }
 
-	@media screen and (min-width: 50em) {
+  .menu-toggle {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+
+	img {
+	  width: 24px; // Adjust size as needed
+	  height: auto;
+	}
+
+	&:focus {
+	  outline: 2px solid #000; // Adjust focus style as needed
+	}
+  }
+
+  @media screen and (min-width: 37.5em) {
+	.menu-toggle {
 	  display: none;
+	}
+
+	.main-navigation ul {
+	  display: flex;
 	}
   }
 

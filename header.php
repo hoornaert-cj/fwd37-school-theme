@@ -1,15 +1,3 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package School_Theme
- */
-
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -54,21 +42,24 @@
             <?php endif; ?>
         </div><!-- .site-branding -->
 
-		<!-- Menu toggle button with SVG -->
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/menu.svg' ); ?>" alt="Menu">
-    	</button>
-
-
+        <!-- Navigation -->
         <nav id="site-navigation" class="main-navigation">
+            <!-- Menu Toggle Button for small screens -->
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/menu.svg' ); ?>" alt="<?php esc_attr_e( 'Menu', 'fwd37-school-theme' ); ?>">
+            </button>
             <?php
             wp_nav_menu(
                 array(
                     'theme_location' => 'header',
                     'menu_id'        => 'primary-menu',
-                    'menu_class'     => 'header-menu', // Add a custom class for styling
+                    'menu_class'     => 'header-menu',
+                    'container'      => false,
                 )
             );
             ?>
         </nav><!-- #site-navigation -->
     </header><!-- #masthead -->
+</div>
+</body>
+</html>
