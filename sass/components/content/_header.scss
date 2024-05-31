@@ -4,55 +4,78 @@
     color: $color__text-hr;
 
     a {
-      color: $color__text-hr;
-      text-decoration: none;
+        color: $color__text-hr;
+        text-decoration: none;
 
-      &:hover {
-        background-color: $color__link-hover;
-      }
+        &:hover {
+            background-color: $color__link-hover;
+        }
     }
 
     li {
-      text-transform: uppercase;
-      font-weight: 900;
+        text-transform: uppercase;
+        font-weight: 900;
     }
 
     .site-branding {
-      padding: 2.5rem 1rem 2.25rem 1rem;
+        padding: 2.5rem 1rem 2.25rem 1rem;
 
-      a {
-        display: inline-block;
-      }
+        a {
+            display: inline-block;
+        }
 
-      img {
-        max-width: 100%;
-        height: 1.5rem;
-      }
+        img {
+            max-width: 100%;
+            height: 1.5rem;
+        }
 
-      .site-title,
-      .site-description {
-        margin: 0;
-      }
+        .site-title,
+        .site-description {
+            margin: 0;
+        }
 
-      @media screen and (min-width: 50em) {
-        text-align: center;
-        grid-column: 2/3;
-        text-align: left;
-      }
+        @media screen and (min-width: 50em) {
+            text-align: center;
+            grid-column: 2/3;
+            text-align: left;
+        }
     }
 
     .site-title {
-      font-size: 1.875rem;
-      margin: 0;
+        font-size: 1.875rem;
+        margin: 0;
     }
 
     .site-description {
-      margin: 0;
+        margin: 0;
     }
 
     @media screen and (min-width: 50em) {
-      display: grid;
-      grid-template-columns: 1fr minmax(auto, 25rem) minmax(auto, 37.5rem) 1fr;
-      justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr minmax(auto, 25rem) minmax(auto, 37.5rem) 1fr;
+        justify-content: center;
     }
-  }
+
+    .menu-toggle {
+        position: absolute;
+        top: -5rem;
+        right: 0.5rem;
+        z-index: 1100;
+        display: block;
+        width: 3.75rem;
+        padding: 1rem;
+        margin: 0;
+        border: none;
+        background: transparent;
+        color: #fff;
+
+
+        @media screen and (min-width: 50em) {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

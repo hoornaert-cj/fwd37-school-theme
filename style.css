@@ -667,7 +667,7 @@ textarea {
 	text-decoration: none;
 }
 .main-navigation li.current-menu-item svg path, .main-navigation li.current_page_item svg path, .main-navigation li:hover > a svg path, .main-navigation li.focus > a svg path {
-	fill: #fff200;
+	fill: #191970;
 }
 .main-navigation a {
 	display: block;
@@ -937,6 +937,27 @@ textarea {
 		grid-template-columns: 1fr minmax(auto, 25rem) minmax(auto, 37.5rem) 1fr;
 		justify-content: center;
 	}
+}
+.site-header .menu-toggle {
+	position: absolute;
+	top: -5rem;
+	right: 0.5rem;
+	z-index: 1100;
+	display: block;
+	width: 3.75rem;
+	padding: 1rem;
+	margin: 0;
+	border: none;
+	background: transparent;
+	color: #fff;
+}
+@media screen and (min-width: 50em) {
+	.site-header .menu-toggle {
+		display: none;
+	}
+}
+.site-header .menu-toggle:hover {
+	cursor: pointer;
 }
 
 /*--------------------------------------------------------------

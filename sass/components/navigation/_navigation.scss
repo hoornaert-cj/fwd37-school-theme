@@ -57,7 +57,7 @@
 	  &.current_page_item svg path,
 	  &:hover > a svg path,
 	  &.focus > a svg path {
-		fill: #fff200;
+		fill: $color__link-hover;
 	  }
 	}
 
