@@ -11,8 +11,8 @@
 		display: none;
 		position: absolute;
 		top: 0;
-		left: 100%; /* Position the sub-menu to the right of the parent */
-		z-index: 999; /* Ensure the sub-menu appears above other content */
+		left: 100%;
+		z-index: 999;
 
 		li:hover > ul,
 		li.focus > ul {
@@ -48,12 +48,12 @@
 /* Small menu */
 .menu-toggle,
 .main-navigation.toggled ul {
-  display: block;
+  display: none;
 }
 
 .menu-toggle {
 	position: absolute;
-    top: 1.5rem;
+    top: 3.5rem;
     right: 0.5rem;
     display: block;
     padding: 1rem;
@@ -68,11 +68,11 @@
   }
 
   &:focus {
-    outline: 2px solid #000; // Adjust focus style as needed
+    outline: 2px solid #000;
   }
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 50em) {
   .menu-toggle {
     display: none;
   }
@@ -105,7 +105,6 @@
 
 @media screen and (min-width: 50em) {
 	.main-navigation ul {
-	  /* Change flex direction to column */
 	  flex-direction: row;
 	  justify-content: flex-end;
 	}
