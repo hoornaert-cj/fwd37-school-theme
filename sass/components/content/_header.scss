@@ -3,13 +3,6 @@
   color: $color__text-hr;
   width: 100%;
 
-  .header-container {
-    display: flex; /* Use flexbox */
-    justify-content: space-between; /* Space out children */
-    align-items: center; /* Center vertically */
-    padding: 1rem;
-  }
-
   a {
     color: $color__text-hr;
     text-decoration: none;
@@ -52,13 +45,14 @@
   }
 
   @media screen and (min-width: 50em) {
-
-    .header-container {
-      justify-content: space-between;
+    #masthead {
+      display: flex;
+      flex-direction: column;
     }
 
     .main-navigation {
       display: flex;
+      width: 60%;
     }
 
     .header-menu {
@@ -68,6 +62,10 @@
     .main-navigation ul {
       flex-direction: row;
       justify-content: flex-end;
+    }
+
+    .site-branding {
+      width: 40%;
     }
   }
 }

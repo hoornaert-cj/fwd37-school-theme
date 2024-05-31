@@ -845,12 +845,6 @@ textarea {
 	color: #fff;
 	width: 100%;
 }
-.site-header .header-container {
-	display: flex; /* Use flexbox */
-	justify-content: space-between; /* Space out children */
-	align-items: center; /* Center vertically */
-	padding: 1rem;
-}
 .site-header a {
 	color: #fff;
 	text-decoration: none;
@@ -883,11 +877,13 @@ textarea {
 	margin: 0;
 }
 @media screen and (min-width: 50em) {
-	.site-header .header-container {
-		justify-content: space-between;
+	.site-header #masthead {
+		display: flex;
+		flex-direction: column;
 	}
 	.site-header .main-navigation {
 		display: flex;
+		width: 60%;
 	}
 	.site-header .header-menu {
 		display: flex;
@@ -895,6 +891,9 @@ textarea {
 	.site-header .main-navigation ul {
 		flex-direction: row;
 		justify-content: flex-end;
+	}
+	.site-header .site-branding {
+		width: 40%;
 	}
 }
 
