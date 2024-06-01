@@ -928,6 +928,17 @@ textarea {
 	padding-right: 1.5rem;
 }
 
+.blog .widget-area {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+}
+.blog .widget-area a {
+	color: #003c71;
+	font-weight: 700;
+	text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

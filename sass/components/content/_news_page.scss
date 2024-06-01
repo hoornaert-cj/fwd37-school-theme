@@ -1,6 +1,7 @@
 .site-main {
     display: grid;
     grid-template-columns: 1fr minmax(0, 50rem) 1fr;
+
 }
 
 .site-main article {
@@ -31,6 +32,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+
+    a {
+        color: $color__link;
+        font-weight: $font-weight_links;
+        text-decoration: none;
+    }
 }
 
 // .widget {
