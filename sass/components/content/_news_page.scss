@@ -1,0 +1,28 @@
+.site-main {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 50rem) 1fr;
+}
+
+.site-main article {
+    grid-column: 2;
+
+    a {
+        font: $font__code;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: $font-weight_links;
+        color: $color__link;
+    }
+
+    .entry-footer {
+        padding-right: 1.5rem;
+        font: $font__pre;
+        color: $color__text-screen;
+        text-align: center;
+
+            a {
+                padding-right: 1.5rem;
+            }
+    }
+
+}

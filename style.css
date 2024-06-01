@@ -519,7 +519,7 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #003c71;
 }
 a:visited {
 	color: #800080;
@@ -901,6 +901,31 @@ textarea {
 	.site-header .site-branding {
 		width: 40%;
 	}
+}
+
+.site-main {
+	display: grid;
+	grid-template-columns: 1fr minmax(0, 50rem) 1fr;
+}
+
+.site-main article {
+	grid-column: 2;
+}
+.site-main article a {
+	font: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 700;
+	color: #003c71;
+}
+.site-main article .entry-footer {
+	padding-right: 1.5rem;
+	font: "Courier 10 Pitch", courier, monospace;
+	color: #21759b;
+	text-align: center;
+}
+.site-main article .entry-footer a {
+	padding-right: 1.5rem;
 }
 
 /*--------------------------------------------------------------
