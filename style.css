@@ -877,9 +877,15 @@ textarea {
 	margin: 0;
 }
 @media screen and (min-width: 50em) {
-	.site-header #masthead {
+	.site-header .site-header {
 		display: flex;
-		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.site-header .site-branding,
+	.site-header .site-navigation {
+		flex: 1; /* Take up equal space */
+		text-align: initial; /* Reset text alignment */
 	}
 	.site-header .main-navigation {
 		display: flex;

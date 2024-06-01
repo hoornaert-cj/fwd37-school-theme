@@ -45,9 +45,16 @@
   }
 
   @media screen and (min-width: 50em) {
-    #masthead {
+    .site-header {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-branding,
+    .site-navigation {
+      flex: 1; /* Take up equal space */
+      text-align: initial; /* Reset text alignment */
     }
 
     .main-navigation {
