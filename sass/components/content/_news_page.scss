@@ -12,7 +12,7 @@
 
 .site-main article {
     a {
-        font: $font__code;
+        font: $font__main;
         text-transform: uppercase;
         text-decoration: none;
         font-weight: $font-weight_links;
@@ -21,7 +21,7 @@
 
     .entry-footer {
         padding-right: 1.5rem;
-        font: $font__pre;
+        font: $font__main;
         color: $color__text-screen;
         text-align: center;
 
