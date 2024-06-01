@@ -26,3 +26,13 @@
     }
 
 }
+
+.blog .widget-area {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+// .widget {
+//     width: 100%;
+// }
