@@ -1,8 +1,64 @@
-.widget {
-	margin: 0 0 1.5em;
+.widget-area {
+    display: grid;
+    gap: 1.25rem;
+    margin: 0 auto;
+    max-width: 62.5rem;
+	padding: 0 2rem;
 
-	// Make sure select elements fit in widgets.
-	select {
-		max-width: 100%;
-	}
+		.wp-block-search__inside-wrapper {
+			display: flex;
+			flex-direction: column;
+		}
+
+		button {
+			background-color: $color__text-screen;
+			color: $color__text-hr;
+			margin: 1rem;
+		}
+
+    @media screen and (min-width: 62.5em) {
+        grid-template-columns: 1fr repeat(5, 1fr) 1fr;
+        max-width: 62.5rem;
+
+        #block-2 {
+            grid-column: 2;
+        }
+        #block-3 {
+            grid-column: 3;
+        }
+        #block-4 {
+            grid-column: 4;
+        }
+        #block-5 {
+            grid-column: 5;
+        }
+        #block-6 {
+            grid-column: 6;
+        }
+    }
+
+    @media screen and (max-width: 50em) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+
+        #block-2,
+        #block-3,
+        #block-4,
+        #block-5,
+        #block-6 {
+            grid-column: 1;
+        }
+    }
+
+    a {
+        color: $color__link;
+        font-weight: $font-weight_links;
+        text-decoration: none;
+    }
+
+    overflow: hidden;
+
+    /* Ensure box sizing */
+    box-sizing: border-box;
+
 }

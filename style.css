@@ -748,11 +748,63 @@ textarea {
 
 /* Widgets
 --------------------------------------------- */
-.widget {
-	margin: 0 0 1.5em;
+.widget-area {
+	display: grid;
+	gap: 1.25rem;
+	margin: 0 auto;
+	max-width: 62.5rem;
+	padding: 0 2rem;
+	overflow: hidden;
+	/* Ensure box sizing */
+	box-sizing: border-box;
 }
-.widget select {
-	max-width: 100%;
+.widget-area .wp-block-search__inside-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.widget-area button {
+	background-color: #21759b;
+	color: #fff;
+	margin: 1rem;
+}
+@media screen and (min-width: 62.5em) {
+	.widget-area {
+		grid-template-columns: 1fr repeat(5, 1fr) 1fr;
+		max-width: 62.5rem;
+	}
+	.widget-area #block-2 {
+		grid-column: 2;
+	}
+	.widget-area #block-3 {
+		grid-column: 3;
+	}
+	.widget-area #block-4 {
+		grid-column: 4;
+	}
+	.widget-area #block-5 {
+		grid-column: 5;
+	}
+	.widget-area #block-6 {
+		grid-column: 6;
+	}
+}
+@media screen and (max-width: 50em) {
+	.widget-area {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto auto;
+	}
+	.widget-area #block-2,
+	.widget-area #block-3,
+	.widget-area #block-4,
+	.widget-area #block-5,
+	.widget-area #block-6 {
+		grid-column: 1;
+	}
+}
+.widget-area a {
+	color: #003c71;
+	font-weight: 700;
+	text-decoration: none;
 }
 
 /* Media
@@ -903,14 +955,72 @@ textarea {
 	}
 }
 
-.site-main {
+.widget-area {
 	display: grid;
-	grid-template-columns: 1fr minmax(0, 50rem) 1fr;
+	gap: 1.25rem;
+	margin: 0 auto;
+	max-width: 62.5rem;
+	padding: 0 2rem;
+	overflow: hidden;
+	/* Ensure box sizing */
+	box-sizing: border-box;
+}
+.widget-area .wp-block-search__inside-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.widget-area button {
+	background-color: #21759b;
+	color: #fff;
+	margin: 1rem;
+}
+@media screen and (min-width: 62.5em) {
+	.widget-area {
+		grid-template-columns: 1fr repeat(5, 1fr) 1fr;
+		max-width: 62.5rem;
+	}
+	.widget-area #block-2 {
+		grid-column: 2;
+	}
+	.widget-area #block-3 {
+		grid-column: 3;
+	}
+	.widget-area #block-4 {
+		grid-column: 4;
+	}
+	.widget-area #block-5 {
+		grid-column: 5;
+	}
+	.widget-area #block-6 {
+		grid-column: 6;
+	}
+}
+@media screen and (max-width: 50em) {
+	.widget-area {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto auto;
+	}
+	.widget-area #block-2,
+	.widget-area #block-3,
+	.widget-area #block-4,
+	.widget-area #block-5,
+	.widget-area #block-6 {
+		grid-column: 1;
+	}
+}
+.widget-area a {
+	color: #003c71;
+	font-weight: 700;
+	text-decoration: none;
 }
 
-.site-main article {
-	grid-column: 2;
+.site-main {
+	display: grid;
+	gap: 20px;
+	margin: 1.5rem;
+	max-width: 125rem;
 }
+
 .site-main article a {
 	font: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	text-transform: uppercase;
@@ -928,12 +1038,73 @@ textarea {
 	padding-right: 1.5rem;
 }
 
-.blog .widget-area {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 20px;
+@media screen and (min-width: 62.5em) {
+	.site-main {
+		display: grid;
+		grid-template-columns: 1fr minmax(0, 62.5rem) 1fr;
+		justify-content: center;
+	}
+	.site-main article {
+		grid-column: 2;
+	}
+	.blog .widget-area {
+		max-width: 62.5rem;
+	}
 }
-.blog .widget-area a {
+.widget-area {
+	display: grid;
+	gap: 1.25rem;
+	margin: 0 auto;
+	max-width: 62.5rem;
+	padding: 0 2rem;
+	overflow: hidden;
+	/* Ensure box sizing */
+	box-sizing: border-box;
+}
+.widget-area .wp-block-search__inside-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.widget-area button {
+	background-color: #21759b;
+	color: #fff;
+	margin: 1rem;
+}
+@media screen and (min-width: 62.5em) {
+	.widget-area {
+		grid-template-columns: 1fr repeat(5, 1fr) 1fr;
+		max-width: 62.5rem;
+	}
+	.widget-area #block-2 {
+		grid-column: 2;
+	}
+	.widget-area #block-3 {
+		grid-column: 3;
+	}
+	.widget-area #block-4 {
+		grid-column: 4;
+	}
+	.widget-area #block-5 {
+		grid-column: 5;
+	}
+	.widget-area #block-6 {
+		grid-column: 6;
+	}
+}
+@media screen and (max-width: 50em) {
+	.widget-area {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto auto;
+	}
+	.widget-area #block-2,
+	.widget-area #block-3,
+	.widget-area #block-4,
+	.widget-area #block-5,
+	.widget-area #block-6 {
+		grid-column: 1;
+	}
+}
+.widget-area a {
 	color: #003c71;
 	font-weight: 700;
 	text-decoration: none;
