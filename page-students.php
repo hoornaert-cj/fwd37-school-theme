@@ -6,6 +6,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
+    <h1 class="page-title">The Class</h1>
     <?php
     // Modify excerpt length and more link text for this template
     function custom_student_excerpt_length($length) {
