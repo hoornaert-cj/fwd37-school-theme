@@ -22,5 +22,87 @@
 	margin: 0 0 1.5em;
 }
 
+.fwd-student-template-default {
 
+	.site-main {
+		margin-bottom: 1.5rem;
+	}
 
+	.fwd-student {
+		border: 1px solid #000;
+		margin: 1rem;
+		padding: 1.5rem;
+		font-weight: 400;
+	}
+
+	h1 {
+		font-family: $font__code;
+	}
+
+	ul {
+		padding-left: 0;
+		margin-left: 0;
+	}
+
+	a {
+		@include link-styles;
+		text-align: left;
+	}
+
+	.wp-block-button__link {
+		color: $color__text-hr;
+	}
+
+}
+
+@media (min-width: 37.5em) {
+    .fwd-student-template-default {
+        .fwd-student {
+            margin: 0 auto;
+            margin-top: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr; // Two equal columns
+            grid-template-areas:
+                "student-header student-header"
+                "content image"
+                "related image";
+
+            .entry-header {
+                grid-area: student-header;
+            }
+
+            .entry-content {
+                grid-area: content;
+            }
+
+            .related-students {
+                grid-area: related;
+            }
+
+            img {
+                grid-area: image;
+                max-width: 100%;
+                height: auto;
+                padding: 2.5rem 0;
+                display: block;
+                margin: 0 auto;
+            }
+
+            h1 {
+                padding: 0;
+                margin: 0;
+                text-align: left;
+            }
+        }
+    }
+
+    article {
+        max-width: 85%;
+    }
+}
+
+@media (min-width: 50em) {
+    article {
+        max-width: 60%;
+    }
+}

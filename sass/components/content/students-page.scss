@@ -29,22 +29,19 @@
                 padding: 1rem;
             }
 
-            // Media query for screens smaller than 37.5em
+
             @media (max-width: 37.5em) {
                 grid-template-columns: 1fr;
                 justify-content: center;
 
-                // Positioning for student-items
-                .student-item {
-                    // No specific positioning needed for screens smaller than 37.5em
-                }
+
             }
 
             // Media query for screens larger than 37.5em and smaller than 62.5em
-            @media (min-width: 37.5em) and (max-width: 62.5em) {
+            @media (min-width: 37.5em) {
                 grid-template-columns: minmax(auto, 1fr) repeat(2, minmax(0, auto)) minmax(auto, 1fr);
 
-                // Positioning for student-items
+
                 .student-item {
                     // Set the position of student-items dynamically
                     @for $i from 1 through 100 {

@@ -12,15 +12,15 @@ get_header();
         while (have_posts()) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header class="entry-header">
+                    <!-- Display the title of the post -->
+                    <h1 class="entry-title"><?php the_title(); ?></h1>
+                </header><!-- .entry-header -->
                     <?php
                     // Display the featured image if available
                     if (has_post_thumbnail()) {
                         the_post_thumbnail('student-thumbnail');
                     }
                     ?>
-                    <!-- Display the title of the post -->
-                    <h1 class="entry-title"><?php the_title(); ?></h1>
-                </header><!-- .entry-header -->
 
                 <!-- Display the content of the post -->
                 <div class="entry-content">
