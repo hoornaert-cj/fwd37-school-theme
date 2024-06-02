@@ -15,7 +15,7 @@ get_header(); ?>
     add_filter('excerpt_length', 'custom_student_excerpt_length');
 
     function custom_student_excerpt_more($more) {
-        return '... <a href="' . get_permalink() . '">Read More about the Student</a>';
+        return '<br> <a href="' . get_permalink() . '">Read More about the Student...</a>';
     }
     add_filter('excerpt_more', 'custom_student_excerpt_more');
 
@@ -44,6 +44,7 @@ get_header(); ?>
                 <?php endif; ?>
                 <div class="student-excerpt">
                     <?php the_excerpt(); ?>
+
                 </div>
                 <div class="student-specialty">
                     <?php
