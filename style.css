@@ -1065,11 +1065,55 @@ textarea {
 	padding-left: 0;
 	margin-left: 0;
 }
+@media (min-width: 37.5em) {
+	.page-id-62 .content-area ul {
+		display: grid;
+		grid-template-columns: minmax(auto, 1fr) repeat(2, minmax(0, auto)) minmax(auto, 1fr);
+		gap: 1rem;
+		justify-content: center;
+	}
+}
 .page-id-62 .student-item {
 	max-width: 18.75rem;
 	margin: 0 auto;
 	border: 1px solid #000;
 	margin-bottom: 1rem;
+}
+@media (min-width: 37.5em) {
+	.page-id-62 .student-item:nth-child(2n+1) {
+		grid-row: 1;
+		grid-column: 2;
+	}
+	.page-id-62 .student-item:nth-child(2n+2) {
+		grid-row: 1;
+		grid-column: 3;
+	}
+	.page-id-62 .student-item:nth-child(n+3) {
+		grid-row: auto;
+	}
+}
+@media (min-width: 50em) {
+	.page-id-62 .student-item {
+		max-width: 18.75rem;
+		margin: 0 auto;
+		border: 1px solid #000;
+		margin-bottom: 1rem;
+	}
+	.page-id-62 .student-item:nth-child(3n+2) {
+		grid-row: 1;
+		grid-column: 2;
+	}
+	.page-id-62 .student-item:nth-child(3n+3) {
+		grid-row: 1;
+		grid-column: 3;
+	}
+	.page-id-62 .student-item:nth-child(3n+4) {
+		grid-row: 1;
+		grid-column: 4;
+	}
+	.page-id-62 .student-item:nth-child(n+5) {
+		grid-row: auto;
+	}
 }
 
 .widget-area {
