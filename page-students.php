@@ -34,16 +34,26 @@ get_header(); ?>
         // Loop through students
         while ($student_query->have_posts()) : $student_query->the_post(); ?>
             <li class="student-item">
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <?php if (has_post_thumbnail()) : ?>
                     <div class="student-thumbnail">
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('thumbnail'); ?>
+                            <?php the_post_thumbnail('medium'); ?>
                         </a>
                     </div>
                 <?php endif; ?>
-                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <div class="student-excerpt">
                     <?php the_excerpt(); ?>
+                    <?php
+                    $terms = wp_get_post_terms(get_the_ID(), 'fwd-student-category');
+                    if (!empty($terms) && !is_wp_error($terms)) {
+                        $specialties = array();
+                        foreach ($terms as $term) {
+                            $specialties[] = $term->name;
+                        }
+                        echo 'Specialty: ' . implode(', ', $specialties);
+                    }
+                    ?>
                 </div>
             </li>
         <?php endwhile;
@@ -63,5 +73,4 @@ get_header(); ?>
     </main><!-- .site-main -->
 </div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -476,7 +476,7 @@ ol {
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
 }
 
 ol {
@@ -661,7 +661,7 @@ textarea {
 
 .menu-toggle {
 	position: absolute;
-	top: 2.5rem;
+	top: -0.25rem;
 	right: 0.5rem;
 	display: block;
 	padding: 1rem;
@@ -1053,6 +1053,22 @@ textarea {
 		max-width: 62.5rem;
 	}
 }
+.page-id-62 .content-area {
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+}
+.page-id-62 .content-area a {
+	font: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 700;
+	color: #003c71;
+}
+.page-id-62 .content-area ul {
+	padding-left: 0;
+	margin-left: 0;
+}
+
 .widget-area {
 	display: grid;
 	gap: 1.25rem;
