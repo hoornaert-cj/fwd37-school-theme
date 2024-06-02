@@ -1,0 +1,17 @@
+.student-layout {
+    overflow: hidden;
+    max-width: 125rem;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, auto) 1fr minmax(0, auto) minmax(0, 1fr); // Define multiple columns
+    grid-template-rows: auto 1fr auto; // Header, Main, Footer take up the respective heights
+    grid-template-areas:
+        "header header header header "
+        ". main main  ."
+        "footer footer footer footer";
+}
+
+/* Optionally, if you want the header and footer to have the same width as the main content */
+header, footer {
+    grid-column: 1 / -1; // Ensure header and footer span across all columns
+}

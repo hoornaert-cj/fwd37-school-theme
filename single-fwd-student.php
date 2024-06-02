@@ -15,7 +15,7 @@ get_header();
                     <?php
                     // Display the featured image if available
                     if (has_post_thumbnail()) {
-                        the_post_thumbnail('medium');
+                        the_post_thumbnail('student-thumbnail');
                     }
                     ?>
                     <!-- Display the title of the post -->

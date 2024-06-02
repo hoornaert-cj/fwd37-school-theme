@@ -6,7 +6,6 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-
     <?php
     // Modify excerpt length and more link text for this template
     function custom_student_excerpt_length($length) {
@@ -44,14 +43,13 @@ get_header(); ?>
                 <?php endif; ?>
                 <div class="student-excerpt">
                     <?php the_excerpt(); ?>
+                </div>
+                <div class="student-specialty">
                     <?php
-                    $terms = wp_get_post_terms(get_the_ID(), 'fwd-student-category');
-                    if (!empty($terms) && !is_wp_error($terms)) {
-                        $specialties = array();
-                        foreach ($terms as $term) {
-                            $specialties[] = $term->name;
-                        }
-                        echo 'Specialty: ' . implode(', ', $specialties);
+                    $terms = get_the_terms(get_the_ID(), 'fwd-student-category');
+                    if ($terms && !is_wp_error($terms)) {
+                        $term_list = wp_list_pluck($terms, 'name');
+                        echo 'Specialty: ' . implode(', ', $term_list);
                     }
                     ?>
                 </div>
@@ -69,7 +67,6 @@ get_header(); ?>
     remove_filter('excerpt_length', 'custom_student_excerpt_length');
     remove_filter('excerpt_more', 'custom_student_excerpt_more');
     ?>
-
     </main><!-- .site-main -->
 </div><!-- .content-area -->
 

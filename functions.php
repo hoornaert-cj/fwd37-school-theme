@@ -200,6 +200,12 @@ function enqueue_theme_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_theme_assets' );
 
+function fwd_register_custom_image_sizes() {
+    add_image_size( 'student-thumbnail', 245, 300, true );
+}
+add_action( 'after_setup_theme', 'fwd_register_custom_image_sizes' );
+
+
 /**
  * Implement the Custom Header feature.
  */

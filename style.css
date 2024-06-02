@@ -1016,37 +1016,36 @@ textarea {
 	text-decoration: none;
 }
 
-.site-main {
+.blog .site-main {
 	display: grid;
 	gap: 20px;
 	margin: 1.5rem;
 	max-width: 125rem;
 }
 
-.site-main article a {
+.blog .site-main article a {
 	font: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: 700;
 	color: #003c71;
 }
-.site-main article .entry-footer {
+.blog .site-main article .entry-footer {
 	padding-right: 1.5rem;
 	font: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	color: #21759b;
 	text-align: center;
 }
-.site-main article .entry-footer a {
+.blog .site-main article .entry-footer a {
 	padding-right: 1.5rem;
 }
 
 @media screen and (min-width: 62.5em) {
-	.site-main {
+	.blog .site-main {
 		display: grid;
 		grid-template-columns: 1fr minmax(0, 62.5rem) 1fr;
 		justify-content: center;
 	}
-	.site-main article {
+	.blog .site-main article {
 		grid-column: 2;
 	}
 	.blog .widget-area {
@@ -1054,12 +1053,10 @@ textarea {
 	}
 }
 .page-id-62 .content-area {
-	background-color: #f0f0f0;
 	border: 1px solid #ccc;
 }
 .page-id-62 .content-area a {
 	font: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: 700;
 	color: #003c71;
@@ -1067,6 +1064,12 @@ textarea {
 .page-id-62 .content-area ul {
 	padding-left: 0;
 	margin-left: 0;
+}
+.page-id-62 .student-item {
+	max-width: 18.75rem;
+	margin: 0 auto;
+	border: 1px solid #000;
+	margin-bottom: 1rem;
 }
 
 .widget-area {

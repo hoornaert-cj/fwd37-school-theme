@@ -19,7 +19,6 @@
 
 @mixin link-styles {
     font: $font__main;
-    text-transform: uppercase;
     text-decoration: none;
     font-weight: $font-weight_links;
     color: $color__link;
