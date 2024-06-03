@@ -1,16 +1,6 @@
 .fwd-student-template-default {
     .site-main {
         margin-bottom: 1.5rem;
-
-        @media (min-width: 37.5em) {
-            max-width: 85%;
-            margin: 0 auto;
-        }
-
-        @media (min-width: 50em) {
-            max-width: 60%;
-            margin: 0 auto;
-        }
     }
 
     .fwd-student {
@@ -73,6 +63,18 @@
                 padding: 0;
                 margin: 0;
                 text-align: left;
+            }
+        }
+
+        article {
+            margin: 0 auto;
+
+            @media (min-width: 37.5em) {
+                max-width: 85%;
+            }
+
+            @media (min-width: 50em) {
+                max-width: 60%;
             }
         }
     }
