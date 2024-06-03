@@ -661,7 +661,7 @@ textarea {
 
 .menu-toggle {
 	position: absolute;
-	top: -0.25rem;
+	top: 0;
 	right: 0.5rem;
 	display: block;
 	padding: 1rem;
@@ -952,6 +952,9 @@ textarea {
 	text-transform: uppercase;
 	font-weight: 900;
 }
+.site-header .site-branding {
+	padding-top: 0.5rem;
+}
 .site-header .site-branding a {
 	display: inline-block;
 }
@@ -984,6 +987,7 @@ textarea {
 	}
 	.site-header .header-wrapper .site-branding {
 		margin-left: 1rem;
+		padding-top: 0;
 	}
 	.site-header .menu-toggle {
 		display: none;
@@ -1094,6 +1098,8 @@ textarea {
 	}
 	.blog .widget-area {
 		max-width: 62.5rem;
+		margin: 0 auto;
+		margin-bottom: 1.5rem;
 	}
 }
 .page-id-62 .content-area {
@@ -3213,6 +3219,7 @@ textarea {
 	margin: 1rem;
 	padding: 1.5rem;
 	font-weight: 400;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .fwd-student-template-default .fwd-student h1 {
 	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;

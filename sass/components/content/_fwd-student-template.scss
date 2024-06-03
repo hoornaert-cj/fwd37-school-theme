@@ -8,6 +8,7 @@
         margin: 1rem;
         padding: 1.5rem;
         font-weight: 400;
+        @include box-shadow-custom;
 
         h1 {
             font-family: $font__code;
