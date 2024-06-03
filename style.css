@@ -1069,6 +1069,9 @@ textarea {
 	margin: 1.5rem;
 	max-width: 125rem;
 }
+.blog .site-main article time.updated {
+	display: none;
+}
 
 .blog .site-main article a {
 	font: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;

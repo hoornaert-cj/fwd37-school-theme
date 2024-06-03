@@ -6,6 +6,10 @@
     gap: 20px;
     margin: 1.5rem;
     max-width: 125rem;
+
+    article time.updated {
+        display: none;
+    }
 }
 
 .blog .site-main article {
