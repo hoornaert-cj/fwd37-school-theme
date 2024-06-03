@@ -955,8 +955,9 @@ textarea {
 	text-decoration: none;
 }
 .site-header a:hover {
-	background-color: #191970;
-	color: #fff9c0;
+	color: #ffe43b;
+	text-shadow: 2px 2px 2px rgba(128, 128, 128, 0.5);
+	transform: scale(1.1);
 }
 .site-header li {
 	text-transform: uppercase;

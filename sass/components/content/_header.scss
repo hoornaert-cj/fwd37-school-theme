@@ -8,8 +8,10 @@
     text-decoration: none;
 
     &:hover {
-      background-color: $color__link-hover;
-      color: $color__background-ins;
+      color: $color__hover-hr;
+      //add text shadow
+    @include text-shadow-gray;
+    transform: scale(1.10);
     }
   }
 
