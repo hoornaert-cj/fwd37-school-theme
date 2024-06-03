@@ -76,22 +76,6 @@
   }
 }
 
-@media screen and (min-width: 50em) {
-	.menu-toggle {
-	  display: none;
-	}
-
-	.main-navigation .header-menu {
-		display: flex;
-	  }
-
-	.main-navigation ul {
-	  flex-direction: row;
-	  justify-content: flex-end;
-	}
-  }
-
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation {

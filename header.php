@@ -14,6 +14,7 @@
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'fwd37-school-theme' ); ?></a>
 
     <header id="masthead" class="site-header">
+    <div class="header-wrapper">
         <div class="site-branding">
             <?php
             $logo_url = get_template_directory_uri() . '/assets/images/logo.svg';
@@ -59,6 +60,7 @@
             );
             ?>
         </nav><!-- #site-navigation -->
+        </div><!-- .header-wrapper -->
     </header><!-- #masthead -->
 </div>
 </body>
