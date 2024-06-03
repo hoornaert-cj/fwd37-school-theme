@@ -1,0 +1,13 @@
+.single-post {
+    .site-main {
+        @include post-site-main-margins;
+    }
+
+    .site-main a {
+        @include link-styles;
+    }
+
+    article time.updated {
+        display: none;
+    }
+}

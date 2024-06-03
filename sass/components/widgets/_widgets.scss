@@ -4,6 +4,10 @@
     margin: 0 auto;
     max-width: 62.5rem;
 	padding: 0 2rem;
+    border: 1px solid #333;
+    margin: 1.5rem;
+    padding: 1rem;
+    @include box-shadow-custom;
 
 		.wp-block-search__inside-wrapper {
 			display: flex;

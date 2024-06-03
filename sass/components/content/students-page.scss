@@ -27,6 +27,7 @@
                 border: 1px solid #000;
                 margin-bottom: 1rem;
                 padding: 1rem;
+                @include box-shadow-custom
             }
 
 
@@ -43,7 +44,6 @@
 
 
                 .student-item {
-                    // Set the position of student-items dynamically
                     @for $i from 1 through 100 {
                         &:nth-child(#{2*$i - 1}) {
                             grid-row: calc(#{$i});
@@ -61,7 +61,6 @@
             @media (min-width: 62.5em) {
                 grid-template-columns: minmax(auto, 1fr) repeat(3, minmax(0, auto)) minmax(auto, 1fr);
 
-                // Positioning for student-items
                 .student-item {
                     // Set the position of student-items dynamically
                     @for $i from 1 through 100 {
