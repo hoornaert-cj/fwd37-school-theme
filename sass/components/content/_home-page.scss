@@ -1,0 +1,46 @@
+.page-id-11 {
+    .site-main {
+        @include post-site-main-margins;
+    }
+
+    .wp-block-image {
+        margin: 0 auto;
+    }
+
+    .wp-block-columns {
+        margin-top: 1.5rem;
+    }
+
+    @media (min-width: 50em) {
+        .site-main {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        .wp-block-image {
+            max-width: 100%;
+            // margin: 0 auto;
+        }
+
+        .wp-block-columns {
+            // max-width: 80%;
+            // margin: 0 auto;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .latest-blog-posts {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .latest-blog-posts article {
+            margin: 0 1rem;
+        }
+
+        .latest-blog-posts article a {
+            @include link-styles;
+            align-items: flex-end;
+        }
+
+    }
+}

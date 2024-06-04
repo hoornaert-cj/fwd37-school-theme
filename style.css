@@ -632,7 +632,7 @@ textarea {
 	/* Display sub-menu ul elements */
 }
 .main-navigation ul ul {
-	display: none;
+	display: block;
 	position: absolute;
 	top: 0;
 	left: 100%;
@@ -985,6 +985,19 @@ textarea {
 		text-align: right;
 		margin-right: 1rem;
 	}
+	.site-header .header-wrapper .menu-item-83 {
+		position: relative;
+	}
+	.site-header .header-wrapper .menu-item-83:hover > ul.sub-menu {
+		display: block;
+	}
+	.site-header .header-wrapper .sub-menu {
+		position: absolute;
+		background-color: #000;
+		top: 3.5rem;
+		left: -0.25rem;
+		text-align: center;
+	}
 	.site-header .header-wrapper .site-branding {
 		margin-left: 1rem;
 		padding-top: 0;
@@ -995,6 +1008,43 @@ textarea {
 	.site-header .main-navigation .nav-menu {
 		display: flex;
 		justify-content: flex-end;
+	}
+}
+
+.page-id-11 .site-main {
+	margin: 1rem 2rem;
+}
+.page-id-11 .wp-block-image {
+	margin: 0 auto;
+}
+.page-id-11 .wp-block-columns {
+	margin-top: 1.5rem;
+}
+@media (min-width: 50em) {
+	.page-id-11 .site-main {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	.page-id-11 .wp-block-image {
+		max-width: 100%;
+	}
+	.page-id-11 .wp-block-columns {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+	.page-id-11 .latest-blog-posts {
+		display: flex;
+		flex-direction: row;
+	}
+	.page-id-11 .latest-blog-posts article {
+		margin: 0 1rem;
+	}
+	.page-id-11 .latest-blog-posts article a {
+		font: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+		text-decoration: none;
+		font-weight: 700;
+		color: #003c71;
+		align-items: flex-end;
 	}
 }
 
@@ -3335,9 +3385,17 @@ textarea {
 	border: 1px solid #000;
 	padding: 1.25rem;
 	margin: 1.25rem;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 @media screen and (min-width: 62.5em) {
 	.page-id-41 .site-main {
+		max-width: 62.5rem;
+		margin: 0 auto;
+		margin-bottom: 1.5rem;
+	}
+}
+@media screen and (min-width: 62.5em) {
+	.page-id-41 .widget-area {
 		max-width: 62.5rem;
 		margin: 0 auto;
 		margin-bottom: 1.5rem;
