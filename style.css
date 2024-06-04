@@ -3297,6 +3297,107 @@ textarea {
 	display: none;
 }
 
+.page-id-44 .content-area {
+	margin: 1.5rem;
+	max-width: 125rem;
+}
+.page-id-44 .content-area .wp-block-heading {
+	text-align: center;
+}
+.page-id-44 .content-area table {
+	border: 1px solid #000;
+}
+.page-id-44 .content-area table th {
+	border-bottom: 1px solid #000;
+}
+.page-id-44 .content-area table tbody {
+	text-align: center;
+}
+.page-id-44 .content-area table tbody td {
+	border-bottom: 1px solid #000;
+}
+@media screen and (min-width: 62.5em) {
+	.page-id-44 .content-area {
+		max-width: 62.5rem;
+		margin: 0 auto;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.page-id-41 .site-main {
+	margin: 1.5rem;
+	max-width: 125rem;
+}
+.page-id-41 .site-main h1, .page-id-41 .site-main h2 {
+	text-align: center;
+}
+.page-id-41 .site-main .term-section {
+	border: 1px solid #000;
+	padding: 1.25rem;
+	margin: 1.25rem;
+}
+@media screen and (min-width: 62.5em) {
+	.page-id-41 .site-main {
+		max-width: 62.5rem;
+		margin: 0 auto;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.site-footer {
+	background-color: #000;
+	color: #fff;
+	width: 100%;
+	height: auto;
+	padding: 1.5rem;
+	max-width: 125rem;
+}
+.site-footer .site-info {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	justify-content: center;
+	max-width: 62.5rem;
+	margin: 0 auto;
+}
+.site-footer .site-info a {
+	color: #fff;
+	text-decoration: none;
+}
+.site-footer .site-info a:hover {
+	color: #ffe43b;
+	text-shadow: 2px 2px 2px rgba(128, 128, 128, 0.5);
+	transform: scale(1.1);
+	transition: transform 0.2s, color 0.2s;
+}
+.site-footer .site-info li {
+	text-transform: uppercase;
+	font-weight: 900;
+}
+.site-footer .site-info .custom-logo-link {
+	background-color: #fff;
+	max-width: 2rem;
+	max-height: 2rem;
+	margin: 1rem;
+}
+.site-footer .site-info .menu-footer-menu-container .menu {
+	padding: 0;
+	margin: 1rem;
+}
+.site-footer .site-info .sep {
+	display: none;
+}
+
+@media screen and (min-width: 62.5em) {
+	.site-footer {
+		max-height: 10rem;
+	}
+	.site-footer .site-info {
+		display: flex;
+		max-width: 62.5rem;
+		flex-direction: row;
+	}
+}
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/

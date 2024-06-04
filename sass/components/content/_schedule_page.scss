@@ -1,0 +1,34 @@
+.page-id-44 {
+    .content-area {
+        margin: 1.5rem;
+        max-width: 125rem;
+
+        .wp-block-heading {
+            text-align: center;
+        }
+        table {
+            border: 1px solid $color__background-hr;
+            th {
+                border-bottom: 1px solid $color__background-hr;
+            }
+            tbody {
+                text-align: center;
+                td {
+                    border-bottom: 1px solid $color__background-hr;
+                }
+            }
+        }
+
+
+        @media screen and (min-width: 62.5em) {
+            max-width: 62.5rem;
+            margin: 0 auto;
+            margin-bottom: 1.5rem;
+        }
+
+
+
+
+
+    }
+}

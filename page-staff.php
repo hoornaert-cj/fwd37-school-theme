@@ -59,8 +59,10 @@ get_header();
 					
 					// Output Content.
 					while ( $query -> have_posts() ) {
+						?>
+						<section class="term-section">
+						<?php 
 						$query -> the_post();
-					
 						if ( function_exists( 'get_field' ) ) {
 							if ( get_field( 'short_biography' ) ) {
 
@@ -79,6 +81,9 @@ get_header();
 							}
 						}
 					
+					?>
+					</section>
+					<?php
 					}
 					wp_reset_postdata();
 				}

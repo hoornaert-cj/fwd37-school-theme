@@ -1,0 +1,67 @@
+.site-footer {
+    background-color: $color__background-hr;
+    color: $color__text-hr;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    max-width: 125rem;
+
+    .site-info {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        max-width: 62.5rem;
+        margin: 0 auto;
+
+        a {
+            color: $color__text-hr;
+            text-decoration: none;
+        
+            &:hover {
+              color: $color__hover-hr;
+              // Add text shadow
+              @include text-shadow-gray;
+              transform: scale(1.10);
+              transition: transform 0.2s, color 0.2s;
+            }
+          }
+    
+          li {
+            text-transform: uppercase;
+            font-weight: 900;
+          }
+
+          .custom-logo-link {
+            background-color: $color__text-hr;
+            max-width: 2rem;
+            max-height: 2rem;
+            margin: 1rem;
+
+          }
+    
+        .menu-footer-menu-container {
+            .menu {
+                padding: 0;
+                margin: 1rem;
+            }
+        }
+        .sep {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 62.5em) {
+
+    .site-footer {
+        max-height: 10rem;
+        .site-info {
+            display: flex;
+            max-width: 62.5rem;
+            flex-direction: row;
+            
+        }
+
+    }
+}
