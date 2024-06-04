@@ -3266,10 +3266,9 @@ textarea {
 	.tax-fwd-student-category img {
 		max-width: 100%;
 		height: auto;
-		padding: 2.5rem 0;
 		display: block;
 		margin: 0 auto;
-		align-self: start;
+		align-self: center;
 		justify-self: center;
 	}
 	.tax-fwd-student-category a {
