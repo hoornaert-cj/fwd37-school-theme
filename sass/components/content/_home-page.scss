@@ -11,6 +11,17 @@
         margin-top: 1.5rem;
     }
 
+    .latest-blog-posts article {
+        margin: 0 1rem 2.5rem 1rem;
+        @include box-shadow-custom;
+        text-align: center;
+        padding-bottom: 0.5rem;
+    }
+
+    .latest-blog-posts article a {
+        @include link-styles;
+    }
+
     @media (min-width: 50em) {
         .site-main {
             max-width: 80%;
@@ -39,15 +50,7 @@
             justify-content: center;
         }
 
-        .latest-blog-posts article {
-            margin: 0 1rem 2.5rem 1rem;
-            @include box-shadow-custom;
-            text-align: center
-
-        }
-
         .latest-blog-posts article a {
-            @include link-styles;
             align-items: flex-end;
         }
 
