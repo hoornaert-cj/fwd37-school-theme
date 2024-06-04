@@ -28,13 +28,20 @@
             margin-bottom: 1.5rem;
         }
 
+        .latest-blog-posts-wrapper h2 {
+            text-align: center;
+        }
+
         .latest-blog-posts {
             display: flex;
             flex-direction: row;
         }
 
         .latest-blog-posts article {
-            margin: 0 1rem;
+            margin: 0 1rem 2.5rem 1rem;
+            @include box-shadow-custom;
+            text-align: center
+
         }
 
         .latest-blog-posts article a {

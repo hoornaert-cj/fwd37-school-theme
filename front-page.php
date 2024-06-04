@@ -23,29 +23,32 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'page' );
 			?>
-			<section class="latest-blog-posts">
+			<section class="latest-blog-posts-wrapper">
 			<h2><?php esc_html_e( 'Recent News', 'fwd' ); ?></h2>
-			<?php 
-				$args = array(
-					'post_type' 	 => 'post',
-					'posts_per_page' => 3,
-				);
-				$query = new WP_Query( $args );
-				if( $query -> have_posts() ) {
-					while( $query -> have_posts() ) {
-						$query -> the_post();
-						?>
-						<article>
-							<a href="<?php the_permalink(); ?>"> 
-								<?php the_post_thumbnail('medium'); ?>
-								<h3><?php the_title(); ?></h3>
-							</a>
-						</article>
-						<?php
-					}
-					wp_reset_postdata();
-				}
-			?>	
+				<section class="latest-blog-posts">
+
+					<?php
+						$args = array(
+							'post_type' 	 => 'post',
+							'posts_per_page' => 3,
+						);
+						$query = new WP_Query( $args );
+						if( $query -> have_posts() ) {
+							while( $query -> have_posts() ) {
+								$query -> the_post();
+								?>
+								<article>
+									<a href="<?php the_permalink(); ?>">
+										<?php the_post_thumbnail('medium'); ?>
+										<h3><?php the_title(); ?></h3>
+									</a>
+								</article>
+								<?php
+							}
+							wp_reset_postdata();
+						}
+					?>
+				</section>
 			</section>
 
 
@@ -62,5 +65,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

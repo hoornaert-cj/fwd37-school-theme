@@ -1032,12 +1032,17 @@ textarea {
 		margin-top: 1.5rem;
 		margin-bottom: 1.5rem;
 	}
+	.page-id-11 .latest-blog-posts-wrapper h2 {
+		text-align: center;
+	}
 	.page-id-11 .latest-blog-posts {
 		display: flex;
 		flex-direction: row;
 	}
 	.page-id-11 .latest-blog-posts article {
-		margin: 0 1rem;
+		margin: 0 1rem 2.5rem 1rem;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+		text-align: center;
 	}
 	.page-id-11 .latest-blog-posts article a {
 		font: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
