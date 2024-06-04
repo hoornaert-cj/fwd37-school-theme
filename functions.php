@@ -54,7 +54,7 @@ function fwd37_school_theme_setup() {
     /*
      * Add support for custom logo
      */
-    add_theme_support( 'custom-logo' );
+    // add_theme_support( 'custom-logo' );
 
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus(
@@ -195,8 +195,8 @@ function fwd37_school_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'fwd37_school_theme_enqueue_styles' );
 
 function enqueue_theme_assets() {
-    // Enqueue the SVG file
-    wp_enqueue_style( 'menu-svg', get_template_directory_uri() . '/assets/images/menu.svg', array(), '1.0' );
+    // Enqueue the SVG file as a script
+    wp_enqueue_script( 'menu-svg', get_template_directory_uri() . '/assets/images/menu.svg', array(), '1.0', false );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_theme_assets' );
 
@@ -243,5 +243,3 @@ function cc_mime_types($mimes) {
 add_filter('upload_mimes', 'cc_mime_types');
 
 ?>
-
-
