@@ -1038,6 +1038,7 @@ textarea {
 	.page-id-11 .latest-blog-posts {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
 	}
 	.page-id-11 .latest-blog-posts article {
 		margin: 0 1rem 2.5rem 1rem;
