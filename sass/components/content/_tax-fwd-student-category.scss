@@ -40,8 +40,8 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-areas:
                 "student-cat-header student-cat-header student-cat-header student-cat-header"
-                "content content image image"
-                "related related image image";
+                "content-cat content-cat image-cat image-cat"
+                "portfolio-btn portfolio-btn image-cat image-cat";
                 gap: 1rem;
 
             .site-main {
@@ -55,15 +55,15 @@
             }
 
             p{
-                grid-area: content;
+                grid-area: content-cat;
             }
 
             .wp-block-button{
-                grid-area: related;
+                grid-area: portfolio-btn;
             }
 
             img {
-                grid-area: image;
+                grid-area: image-cat;
                 max-width: 100%;
                 height: auto;
                 padding: 2.5rem 0;
@@ -79,13 +79,6 @@
                 text-align: left;
             }
         }
-
-        // article {
-        //     margin: 0 auto;
-
-            // @media (min-width: 37.5em) {
-            //     max-width: 85%;
-            // }
 
             @media (min-width: 50em) {
                 max-width: 60%;

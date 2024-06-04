@@ -3243,7 +3243,7 @@ textarea {
 		display: grid;
 		margin: 0 auto;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-areas: "student-cat-header student-cat-header student-cat-header student-cat-header" "content content image image" "related related image image";
+		grid-template-areas: "student-cat-header student-cat-header student-cat-header student-cat-header" "content-cat content-cat image-cat image-cat" "portfolio-btn portfolio-btn image-cat image-cat";
 		gap: 1rem;
 	}
 	.tax-fwd-student-category article .site-main {
@@ -3253,13 +3253,13 @@ textarea {
 		grid-area: student-cat-header;
 	}
 	.tax-fwd-student-category article p {
-		grid-area: content;
+		grid-area: content-cat;
 	}
 	.tax-fwd-student-category article .wp-block-button {
-		grid-area: related;
+		grid-area: portfolio-btn;
 	}
 	.tax-fwd-student-category article img {
-		grid-area: image;
+		grid-area: image-cat;
 		max-width: 100%;
 		height: auto;
 		padding: 2.5rem 0;
