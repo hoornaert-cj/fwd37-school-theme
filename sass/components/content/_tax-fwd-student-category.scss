@@ -36,36 +36,26 @@
 @media (min-width: 37.5em) {
     .tax-fwd-student-category article {
         display: grid;
-        margin: 0 auto;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-areas:
-            "student-cat-header student-cat-header student-cat-header student-cat-header"
-            "image-cat image-cat content-cat content-cat"
-            "image-cat image-cat portfolio-btn portfolio-btn";
-        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
     }
 
-    .tax-fwd-student-category .site-main {
-        max-width: 85%;
+    .tax-fwd-student-category h2 {
+        grid-column: span 2;
+        grid-row: 1;
     }
 
-    .tax-fwd-student-category article {
-        margin-bottom: 1.5rem;
+    .tax-fwd-student-category p {
+        grid-row: 2;
+        grid-column: 2;
     }
 
-    .tax-fwd-student-category article h2 {
-        grid-area: student-cat-header;
+    .tax-fwd-student-category .wp-block-button {
+        grid-row: 3;
+        grid-column: 2;
     }
 
-    .tax-fwd-student-category article p {
-        grid-area: content-cat;
-    }
-
-    .tax-fwd-student-category article .wp-block-button {
-        grid-area: portfolio-btn;
-    }
-
-    .tax-fwd-student-category article img {
+    .tax-fwd-student-category img {
         max-width: 100%;
         height: auto;
         padding: 2.5rem 0;
@@ -75,9 +65,15 @@
         justify-self: center;
     }
 
+    .tax-fwd-student-category a {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+
     .tax-fwd-student-category article h1 {
         padding: 0;
-        margin: 0;
+        margin: 0 auto;
         text-align: left;
     }
 }
@@ -85,6 +81,7 @@
 @media (min-width: 50em) {
     .tax-fwd-student-category article {
         max-width: 60%;
+        margin: 0 auto;
         margin-bottom: 2rem;
     }
 }
