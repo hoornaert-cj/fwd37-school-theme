@@ -3211,9 +3211,11 @@ textarea {
 	margin-bottom: 1.5rem;
 	margin: 1rem;
 }
+
 .tax-fwd-student-category h1 {
 	text-align: center;
 }
+
 .tax-fwd-student-category article {
 	border: 1px solid #000;
 	margin: 1rem;
@@ -3221,13 +3223,16 @@ textarea {
 	font-weight: 400;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
 .tax-fwd-student-category article h1 {
 	font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
+
 .tax-fwd-student-category article ul {
 	padding-left: 0;
 	margin-left: 0;
 }
+
 .tax-fwd-student-category article a {
 	font: "Fira Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	text-decoration: none;
@@ -3235,19 +3240,24 @@ textarea {
 	color: #003c71;
 	text-align: left;
 }
+
 .tax-fwd-student-category article .wp-block-button__link {
 	color: #fff;
 }
+
 @media (min-width: 37.5em) {
 	.tax-fwd-student-category article {
 		display: grid;
 		margin: 0 auto;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-areas: "student-cat-header student-cat-header student-cat-header student-cat-header" "content-cat content-cat image-cat image-cat" "portfolio-btn portfolio-btn image-cat image-cat";
+		grid-template-areas: "student-cat-header student-cat-header student-cat-header student-cat-header" "image-cat image-cat content-cat content-cat" "image-cat image-cat portfolio-btn portfolio-btn";
 		gap: 1rem;
 	}
-	.tax-fwd-student-category article .site-main {
+	.tax-fwd-student-category .site-main {
 		max-width: 85%;
+	}
+	.tax-fwd-student-category article {
+		margin-bottom: 1.5rem;
 	}
 	.tax-fwd-student-category article h2 {
 		grid-area: student-cat-header;
@@ -3259,7 +3269,6 @@ textarea {
 		grid-area: portfolio-btn;
 	}
 	.tax-fwd-student-category article img {
-		grid-area: image-cat;
 		max-width: 100%;
 		height: auto;
 		padding: 2.5rem 0;
@@ -3277,9 +3286,9 @@ textarea {
 @media (min-width: 50em) {
 	.tax-fwd-student-category article {
 		max-width: 60%;
+		margin-bottom: 2rem;
 	}
 }
-
 .widget-area {
 	display: grid;
 	gap: 1.25rem;
