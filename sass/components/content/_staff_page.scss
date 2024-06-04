@@ -10,9 +10,18 @@
         .term-section {
             border: 1px solid $color__background-hr;
             padding: 1.25rem;
-            margin: 1.25rem
+            margin: 1.25rem;
+            @include box-shadow-custom;
         }
+        
         @media screen and (min-width: 62.5em) {
+            max-width: 62.5rem;
+            margin: 0 auto;
+            margin-bottom: 1.5rem;
+        }
+    }
+    @media screen and (min-width: 62.5em) {
+        .widget-area {
             max-width: 62.5rem;
             margin: 0 auto;
             margin-bottom: 1.5rem;
